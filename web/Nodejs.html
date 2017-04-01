@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Node JS | TutorWEB</title>
+<link rel=icon type=image/png href=nodejs.png />
+<link rel=stylesheet type=text/css href=S.css />
+</head>
+<body>
+<div class="div_body_header">
+	<img src=tutorweb.png  height = 32px />
+    <a href="login.php"><button class="button" id="login">Login</button></a>
+</div>
+<div id="div">
+	<h1> Node JS </h1>
+	<h4> Learn the fundamentals of Node JS, the most robust framework using Javascript V8 Engine.</h4>
+	<a href="editor.php?lang=nodejs&lesson=1" target= "_blank"><button class="button">Start</button></a>
+</div>
+
+<div >
+<p><br><br><br><br><br><br><br></p>
+</div>
+<hr>
+<div id="tabdiv">
+<div style="display:inline-block;">
+<table class = div_table>
+	<tr>
+		<td><b> 5m+</b> <br>
+		enrolled candidate</td>
+		<td><b> Over 100 hours</b> <br>
+		estimated course time</td>
+		<td><b> Beginner</b> <br> 
+		required technical level</td>
+	</tr>
+</table>
+</div>
+</div>
+<hr><br>
+<figure id="video_player">
+    <div id="video_container">
+        <video controls poster="Others/Nodejs/nodejs1.jpg">
+            <source src="Others/Nodejs/nodejs1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <figcaption>
+    <a href="Others/Nodejs/nodejs1.mp4">
+        <img src="Others/Nodejs/nodejs1.jpg">
+      </a>
+      <a href="Others/Nodejs/nodejs2.mp4" class="currentvid">
+        <img src = "Others/Nodejs/nodejs2.jpg">
+      </a>
+      <a href="Others/Nodejs/nodejs3.mp4">
+        <img src="Others/Nodejs/nodejs3.jpg">
+      </a>
+    </figcaption>
+</figure>
+
+<script>
+var video_player = document.getElementById("video_player");
+video = video_player.getElementsByTagName("video")[0],
+video_links = video_player.getElementsByTagName("figcaption")[0],
+source = video.getElementsByTagName("source"),
+link_list = [],
+vidDir = "Others/Nodejs/",
+currentVid = 0,
+allLnks = video_links.children,
+lnkNum = allLnks.length;
+video.removeAttribute("controls");
+video.removeAttribute("poster");
+
+(function() {
+function playVid(index) {
+ video_links.children[index].classList.add("currentvid");
+    //source[1].src = vidDir + link_list[index] + ".webm";  
+	source[0].src = vidDir + link_list[index] + ".mp4";
+    currentVid = index;
+    video.load();
+	video.play();
+}
+
+for (var i=0; i<lnkNum; i++) {
+var filename = allLnks[i].href;
+link_list[i] = filename.match(/([^\/]+)(?=\.\w+$)/)[0];
+(function(index){
+        allLnks[i].onclick = function(i){
+        i.preventDefault();  
+		for (var i=0; i<lnkNum; i++) {
+		allLnks[i].classList.remove("currentvid");
+		}
+		playVid(index);
+        }    
+    })(i);
+}
+video.addEventListener('ended', function () {
+    allLnks[currentVid].classList.remove("currentvid");
+    if ((currentVid + 1) >= lnkNum) { nextVid = 0 } else { nextVid = currentVid+1 }
+    playVid(nextVid);
+})
+
+video.addEventListener('mouseenter', function() {
+    video.setAttribute("controls","true");
+})
+
+video.addEventListener('mouseleave', function() {
+    video.removeAttribute("controls");
+})
+
+var indexOf = function(needle) {
+    if(typeof Array.prototype.indexOf === 'function') {
+        indexOf = Array.prototype.indexOf;
+    } else {
+        indexOf = function(needle) {
+            var i = -1, index = -1;
+			for(i = 0; i < this.length; i++) {
+                if(this[i] === needle) {
+                    index = i;
+                    break;
+                }}
+            return index;
+        };}
+    return indexOf.call(this, needle);
+};
+ 	var focusedLink = document.activeElement;
+ 	index = indexOf.call(allLnks, focusedLink);
+ 	
+document.addEventListener('keydown', function(e) {
+if (index) {
+	var focusedElement = document.activeElement;
+    if (e.keyCode == 40 || e.keyCode == 39) { // down or right cursor
+    var nextNode = focusedElement.nextElementSibling;
+    if (nextNode) { nextNode.focus(); } else { video_links.firstElementChild.focus(); }
+    }
+   if (e.keyCode == 38 || e.keyCode == 37) { // up or left cursor
+    var previousNode = focusedElement.previousElementSibling;
+    if (previousNode) { previousNode.focus(); } else { video_links.lastElementChild.focus(); }
+    }
+ }
+});
+
+})();
+
+</script>
+	
+		</body>
+</html>

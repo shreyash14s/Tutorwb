@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {width: 225px; height: 400px;
+  background-image: url(sprite.png);
+  -webkit-animation: gangham 4s steps(23,start) infinite,
+    movearound 12s steps(69,end) infinite 44ms;
+  animation: gangham 4s steps(23,start) infinite,
+    movearound 12s steps(69,end) infinite alternate 44ms;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+@-webkit-keyframes gangham {
+  0% {background-position: 0 0}
+  100% {background-position: -5175px 0}
+}
+@keyframes gangham {
+  0% {background-position: 0 0}
+  100% {background-position: -5175px 0}
+}
+@-webkit-keyframes movearound {
+  0% {-webkit-transform: translatex(0)}
+  100% {-webkit-transform: translatex(600px);}
+}
+
+@keyframes movearound {
+  0% {transform: translatex(0)}
+  100% {transform: translatex(600px);}
+}
+    
+
+    </style>
+    </head>
+<body>
+<div>
+</div>
+<img src="Congrats.gif" alt="Congrats" width = "46%" style="position:absolute;right:1%;top:12%"/>
+<img src="success.png" alt="Success" width = "90%" style="position:absolute;left:1%;bottom:12%"/>
+<script type="text/javascript">
+setTimeout(fn, 5*1000);
+function fn() {
+  window.location = "tutorial.html";
+}
+</script>
+</body>
+</html>

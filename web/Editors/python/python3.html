@@ -1,0 +1,84 @@
+<div id="cont">
+	<div id="head">
+		<h2>Python</h2>
+		<div id="imghead">
+			<h1><a href="#"><img src="tutorweb.png" height="27px"/></a></h1>
+		</div>
+	</div>
+	<div>
+		<div id="left">
+			<div id="lefthead"><h3> Lists in Python </h3></div>
+			<p>Python offers a range of compound datatypes often referred to as sequences. List is one of the most frequently 
+                used and very versatile datatype used in Python.<br><br></p>
+               <div id="lefthead"><h3> Creating a List </h3></div>
+            <p>In Python programming, a list is created by placing all the items (elements) inside a square bracket [ ], separated by commas. It can                   have any number of items and they may be of different types (integer, float, string etc.).
+            <div id="lefthead" style="background:#6a7aa5">
+            <pre>
+# empty list
+my_list = []
+
+# list of integers
+my_list = [1, 2, 3]
+
+# list with mixed datatypes
+my_list = [1, "Hello", 3.4]
+
+# nested list
+my_list = ["mouse", [8, 4, 6]]
+            </pre>
+            </div><br>
+          <div id="lefthead"><h3> Accessing Elements in a List </h3></div>
+            There are various ways in which we can access the elements of a list.
+            <h4><u>Indexing</u></h4><br>
+            We can use the index operator [] to access an item in a list. Index starts from 0. So, a list having 5 elements will have index from 0 to              4. Trying to access an element other that this will raise an IndexError. The index must be an integer. We can't use float or other                  types, this will result into TypeError. Nested list are accessed using nested indexing.<br>
+            <div id="lefthead" style="background:#6a7aa5">
+            <pre>
+>>>my_list=['p','r','o','b','e']
+>>> my_list[0]
+    'p'
+>>> my_list[2]
+    'o'
+>>> my_list[4]
+    'e'
+>>> my_list[5]
+...
+IndexError: list index out 
+            of range
+</pre>
+</div>
+            <br><br>
+                        <h4><u>Negative Indexing</u></h4><br>
+                Python allows negative indexing for its sequences. The index of -1 refers to the last item, -2 to the second last item and so on.
+            <br><br>
+                    <h4><u>Traversing through 'for' loop</u></h4><br>
+            Using a for loop we can iterate though each item in a list.<br><br>
+            <div id="lefthead" style="background:#6a7aa5">
+            <pre>
+>>> l=['apple','banana','mango']
+>>> for fruit in l:
+...     print("I like",fruit)
+...    
+I like apple
+I like banana
+I like mango
+            </pre>
+            </div>
+            </p><br><br><br>
+			<div id="lefthead"><h3> Instructions </h3></div>
+      <p>1.Using <i>for</i> loop print even numbers from <b>1</b> to <b>10</b>.<br><br>
+				2.Press the <i>Submit</i> button to run your code.
+			</p>
+		</div>
+		<div id="edit">
+			<div id="editor">
+				<div id="container">
+					<div id="divlines">
+					</div>
+				</div>
+				<textarea id="text" name="name" placeholder = "Type something here." autofocus></textarea>
+				<textarea name="l" style = "visibility:hidden">python</textarea>
+			</div>
+			<div id="submit"><button class="btn" id="s">Submit</button></div>
+		</div>
+	</div>
+</div>

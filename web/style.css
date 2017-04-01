@@ -1,0 +1,276 @@
+body {
+	background-image:url('wallpaper.jpg');
+}
+p {
+	color:white;
+	font-family:"Lucida Console", Monaco, serif;
+	font-size:28px;
+}
+.heading {
+	color:white;
+	position:relative;
+	padding:5px;
+	text-decoration:underline;
+	text-align: center;
+}
+
+/*STart OF mEnU*/
+.clearfix:after {
+	display:block;
+}
+ 
+/*----- Menu Outline -----*/
+.menu_wrap {
+	width:100%;height:100%;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+	text-align: center;
+}
+.menu {
+	width:auto;
+	height:auto;
+	margin:0px auto;
+	background:#4d4444;
+	text-transform: capitalize;
+	text-decoration-color: firebrick;
+	border: 2px solid #969191;
+	border-radius: 4px;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+.menu li, .menu ul {
+	list-style:none;
+	font-family:'Ek Mukta';
+	margin-bottom: 5px;
+	/*border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 3px;
+	//font-size: 12pt;
+	//font-weight: 600;
+	//text-transform: uppercase;
+	background: #1ab188;
+	color: #ffffff;
+	-webkit-transition: all 0.5s ease;
+		  transition: all 0.5s ease;
+	-webkit-appearance: none;*/
+}
+.menu a {
+	transition:all linear 0.15s;
+	color:#1ab188;
+	//color: #ffffff;
+	text-decoration: none;
+}
+.menu li:hover > a, .menu .current-item > a {
+	text-decoration:none;
+	color:#be5b70;
+}
+.menu .arrow {
+	font-size:17px;
+	line-height:2%;
+}
+.clearfix {
+	display: inline-block;
+}
+/*----- Top Level -----*/
+.menu > ul > li {
+	//float:left;
+	position:relative;
+	display:inline-block;
+	font-size:25px;
+}
+.menu > ul > li > a {
+	padding:15px 49px;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+	display:inline-block;
+}
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+	background:#0a0909;
+}
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+	z-index:1;
+	opacity:1;
+}
+.sub-menu {
+	width:100%;
+	padding:5px 0px;
+	position:absolute;
+	top:100%;
+	left:0px;
+	z-index:-1;
+	opacity:0;
+	transition:opacity linear 0.15s;
+	box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+	background:#4d4444;
+}
+.sub-menu li {
+	display: block;
+	font-size: 16px;
+	text-align: initial;
+}
+.sub-menu li a {
+	padding:10px 30px;
+	display:block;
+	text-align: initial;
+}
+.sub-menu li a:hover, .sub-menu .current-item a {
+	background:#0a0909;
+}
+/*End of menu*/
+
+/*Start of image transition*/
+#cf {
+	position:relative;
+	height:281px;
+	width:450px;
+	margin:0 auto;
+}
+
+#cf img {
+	position:absolute;
+	left:0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+@keyframes cf3FadeInOut {
+	0% { opacity:1; }
+	45% { opacity:1; }
+	55% { opacity:0; }
+	100% { opacity:0; }
+}
+#cf3 img.top {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: alternate;
+}
+/*End of image transition*/
+.start {
+	background-color: #FFF176;
+	border:1px thin black;
+	border-radius:9px;
+	padding:8px;
+	width:13%;
+	height:20%;
+	float:right;
+	position:relative;
+	right:59px;
+	bottom:-109px;
+	text-align:center;
+}
+.start:hover {
+	background-color:#795548;
+	color:white;
+}
+#object {
+	border:1px thin black;
+	border-radius:10px;	
+	position: relative;
+	width: 70%;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	transition:3s;
+	margin: 20px;
+	display: inline-block;
+}
+#object.nodejs {
+	background-color:#FFA726;
+	margin-top: 80px;
+	text-align: initial;
+}
+#object.java {
+	background-color:#e30000;
+	text-align: initial;
+}
+#object.c {
+	background-color:#062e77;
+	text-align: initial;
+}
+#object.python {
+	background-color:#a11db7;
+	text-align: initial;
+}
+#object:hover{ background-color:#EDE7F6;}
+
+
+
+.jssorb01 {
+	position: absolute;
+	margin: 10px;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+	position: absolute;
+	/* size of bullet elment */
+	width: 12px;
+	height: 12px;
+	filter: alpha(opacity=70);
+	opacity: .7;
+	overflow: hidden;
+	cursor: pointer;
+	border: #000 1px solid;
+}
+.jssorb01 div { background-color: gray; }
+.jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+.jssorb01 .av { background-color: #fff; }
+.jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+/* jssor slider arrow navigator skin 02 css */
+/*
+.jssora02l                  (normal)
+.jssora02r                  (normal)
+.jssora02l:hover            (normal mouseover)
+.jssora02r:hover            (normal mouseover)
+.jssora02l.jssora02ldn      (mousedown)
+.jssora02r.jssora02rdn      (mousedown)
+*/
+.jssora02l, .jssora02r {
+	display: block;
+	position: absolute;
+	/* size of arrow element */
+	width: 55px;
+	height: 55px;
+	cursor: pointer;
+	background: url('Others/a02.png') no-repeat;
+	overflow: hidden;
+}
+.jssora02l { background-position: -3px -33px;visibility: visible; }
+.jssora02r { background-position: -63px -33px; visibility: visible}
+.jssora02l:hover { background-position: -123px -33px;visibility: visible }
+.jssora02r:hover { background-position: -183px -33px; visibility: visible}
+.jssora02l.jssora02ldn { background-position: -3px -33px; visibility: visible}
+.jssora02r.jssora02rdn { background-position: -63px -33px; visibility: visible  }
+/*div[data-p="112.50"]:hover {
+	opacity: 0.8
+}*/
+.button {
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 6px;
+	font-size: 12pt;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	background: #1ab188;
+	color: #ffffff;
+	-webkit-transition: all 0.5s ease;
+		  transition: all 0.5s ease;
+	-webkit-appearance: none;
+	margin: 0px;
+}
+.button:hover, .button:focus {
+	background: #179b77;
+}
+.button-block {
+	display: block;
+	width: 100%;
+}
+#login a {
+	text-decoration: none;
+	color: white;
+}

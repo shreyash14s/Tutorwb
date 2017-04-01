@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TUTORWEB</title>
+<link rel="icon" type="img/png" href="tutorial.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="heading"><a href="tutorial.html"><img src="tutorweb.png" width="60%" height="60%"></a></div>
+
+<div class="menu_wrap">
+	<div class="menu">
+	<ul class="clearfix">
+		<li><a href="mailto:siddharths2710@yahoo.com">Email Us</a></li>
+		<li><a href="about.html">About Us</a></li>
+		<li>
+			<a href="#object">Tutorials Library <span class="arrow">&#9660;</span></a>
+			<ul class="sub-menu">
+				<li><a href="Nodejs.html">Node JS</a></li>
+				<li><a href="Java.html">Java</a></li>
+				<li><a href="C.html">C</a></li>
+				<li><a href="Python.html">Python</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="login.php" id="logina">Login</a>
+		</li>
+	</ul>
+	</div>
+</div>
+<script type="text/javascript" src="Others/jssor.slider.min.js"></script>
+
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1000px; height: 500px; overflow: hidden; visibility: visible;">
+		<!-- Loading Screen -->
+	<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+		<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+	</div>
+	<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1000px; height: 500px; overflow: hidden;">
+		<div data-p="112.50" style="display: none;" onClick="location.href='Nodejs.html'">
+			<img data-u="image" src="Others/Nodejs/NodeJS.jpg" />
+			<div data-u="caption" data-t="0" style="position: absolute; top: 400px; left: 325px; width: 350px; height: 30px; background-color: rgba(235, 81, 0, 0.87); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Robust Javascript V8 framework</div>
+		</div>
+		<div data-p="112.50" style="display: none;" onClick="location.href='Java.html'">
+			<img data-u="image" src="Others/java/Java.jpg" />
+			<div data-u="caption" data-t="1" style="position: absolute; top: -50px; left: 325px; width: 350px; height: 30px; background-color: rgba(7, 147, 23, 0.77); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Object Oriented &amp; Multi-Threading</div>
+		</div>
+		<div data-p="112.50" style="display: none;" onClick="location.href='C.html'">
+			<img data-u="image" src="Others/c/C.jpg" />
+			<div data-u="caption" data-t="7" style="position: absolute; top: -50px; left: 325px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Efficient programming</div>
+		</div>
+		<div data-p="112.50" style="display: none;" onClick="location.href='Python.html'">
+			<img data-u="image" src="Others/Python/Python.jpg" />
+			<div data-u="caption" data-t="6" style="position: absolute; top: 130px; left: 325px; width: 350px; height: 30px; background-color: rgba(235,81,0,0.5); font-size: 20px; color: #ffffff; line-height: 30px; text-align: center;">Powerful &amp;    intensive programming</div>
+		</div>
+		<!-- Bullet Navigator -->
+		<div data-u="navigator" class="jssorb01" style="bottom:16px;right:10px;">
+			<div data-u="prototype" style="width:12px;height:12px;"></div>
+		</div>
+		<!-- Arrow Navigator -->
+		<span data-u="arrowleft" class="jssora02l" style="top:223px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+		<span data-u="arrowright" class="jssora02r" style="top:223px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+	</div>
+</div>
+
+<div style="text-align:center">
+<div name="nodejs" class="nodejs" id="object">
+	<img  src="nodejs.png" width="46%" height="34%"style="position:relative;top:80px;left:45px">
+	<a href="Nodejs.html"><div class="start"><h3>  START</h3></div></a>
+</div>
+<div name="java" class="java" id="object">
+	<img  src="java.png" width="15%" height="91%" style="position:relative;left:75px">
+	<a href="Java.html"><div class="start"><h3>  START</h3></div></a>
+</div>
+<div name="c" class="c" id="object">
+	<img  src="c.png" width="150px"  style="position:relative;top:75px;left:71px">
+	<a href="C.html"><div class="start"><h3>  START</h3></div></a>
+</div>
+<div name="python" class="python" id="object">
+	<img  src="python.png" width="23%" height="63%" style="position:relative;top:75px;left:45px">
+	<a href="Python.html"><div class="start"><h3>  START</h3></div></a>
+</div>
+</div>
+<script src="Others/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	var name = localStorage.getItem("name"),
+		email = localStorage.email, 
+		log = document.getElementById('logina');
+	var a;
+	console.log(name);
+	if (name && name != a && name != "") {
+		//$('#logina').html('Login');
+		log.innerHTML = "Hello " + name;
+		console.log("No name");
+		log.href = "";
+		log.onclick = function () {
+			localStorage.setItem("name", "");
+			localStorage.setItem("email", "");
+		}
+	} else {
+		//$('#logina').html('Hello ' + name);
+		log.innerHTML = "Login";
+		log.href = "login.php";
+		console.log(name);
+	};
+</script>
+
+<script>
+	jssor_1_slider_init = function() {
+		var jssor_1_SlideoTransitions = [
+			[{b:0.0,d:600.0,y:-290.0,e:{y:27.0}}],
+			[{b:0.0,d:1000.0,y:300.0},{b:1000.0,d:500.0,o:-1.0},{b:1500.0,d:500.0,o:1.0},{b:2000.0,d:1500.0,r:360.0},{b:3500.0,d:1000.0,rX:30.0},{b:4500.0,d:500.0,rX:-30.0},{b:5000.0,d:1000.0,rY:30.0},{b:6000.0,d:500.0,rY:-30.0},{b:6500.0,d:500.0,sX:1.0},{b:7000.0,d:500.0,sX:-1.0},{b:7500.0,d:500.0,sY:1.0},{b:8000.0,d:500.0,sY:-1.0},{b:8500.0,d:500.0,kX:30.0},{b:9000.0,d:500.0,kX:-30.0},{b:9500.0,d:500.0,kY:30.0},{b:10000.0,d:500.0,kY:-30.0},{b:10500.0,d:500.0,c:{x:87.50,t:-87.50}},{b:11000.0,d:500.0,c:{x:-87.50,t:87.50}}],
+			[{b:0.0,d:600.0,x:410.0,e:{x:27.0}}],
+			[{b:-1.0,d:1.0,o:-1.0},{b:0.0,d:600.0,o:1.0,e:{o:5.0}}],
+			[{b:-1.0,d:1.0,c:{x:175.0,t:-175.0}},{b:0.0,d:800.0,c:{x:-175.0,t:175.0},e:{c:{x:7.0,t:7.0}}}],
+			[{b:-1.0,d:1.0,o:-1.0},{b:0.0,d:600.0,x:-570.0,o:1.0,e:{x:6.0}}],
+			[{b:-1.0,d:1.0,o:-1.0,r:-180.0},{b:0.0,d:800.0,o:1.0,r:180.0,e:{r:7.0}}],
+			[{b:0.0,d:1000.0,y:274.0,e:{y:24.0}},{b:1000.0,d:1100.0,x:570.0,y:170.0,o:-1.0,r:30.0,sX:9.0,sY:9.0,e:{x:2.0,y:6.0,r:1.0,sX:5.0,sY:5.0}}],
+			[{b:2000.0,d:600.0,rY:30.0}],
+			[{b:0.0,d:500.0,x:-105.0},{b:500.0,d:500.0,x:230.0},{b:1000.0,d:500.0,y:-120.0},{b:1500.0,d:500.0,x:-70.0,y:120.0},{b:2600.0,d:500.0,y:-80.0},{b:3100.0,d:900.0,y:160.0,e:{y:24.0}}],
+			[{b:0.0,d:1000.0,o:-0.4,rX:2.0,rY:1.0},{b:1000.0,d:1000.0,rY:1.0},{b:2000.0,d:1000.0,rX:-1.0},{b:3000.0,d:1000.0,rY:-1.0},{b:4000.0,d:1000.0,o:0.4,rX:-1.0,rY:-1.0}]
+		];
+		
+		var jssor_1_options = {
+			$AutoPlay: true,
+			$Idle: 2000,
+			$CaptionSliderOptions: {
+				$Class: $JssorCaptionSlideo$,
+				$Transitions: jssor_1_SlideoTransitions,
+				$Breaks: [
+					[{d:2000,b:1000}]
+				]
+			},
+			$ArrowNavigatorOptions: {
+				$Class: $JssorArrowNavigator$
+			},
+			$BulletNavigatorOptions: {
+				$Class: $JssorBulletNavigator$
+			}
+		};
+		
+		var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+		
+		//responsive code begin
+		//you can remove responsive code if you don't want the slider scales while window resizes
+		function ScaleSlider() {
+				var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+				if (refSize) {
+						refSize = Math.min(refSize, 1000);
+						jssor_1_slider.$ScaleWidth(refSize);
+				}
+				else {
+						window.setTimeout(ScaleSlider, 30);
+				}
+		}
+		ScaleSlider();
+		$Jssor$.$AddEvent(window, "load", ScaleSlider);
+		$Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+		$Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+		//responsive code end
+	};
+	jssor_1_slider_init();
+</script>
+</body>
+</html>

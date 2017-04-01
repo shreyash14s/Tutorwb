@@ -1,0 +1,272 @@
+body
+{
+background-image: url(wallpaper2.jpg);
+//background-color: #232323;
+color: snow;
+}
+
+h1
+{
+    color: snow;
+}
+
+
+.div_body_header
+{
+	display : block; 
+	color : gray; 
+	padding-bottom : 0px;
+	background-color:black;
+    vertical-align: middle;
+}
+img
+{
+	padding-left : 5px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+    display: inline-block;
+}
+.div_title_center
+{
+	position :absolute;
+	display:inline;
+	font-family : Times New Roman ; 
+	color : black; 
+	left : 0px;
+	top : 43px;
+	bottom : 0px; 
+	font-size : 40px;
+	font-weight : strong; 
+	text-shadow : black 2px ;
+    text-align: center;
+   
+
+}
+#id_subtitle_center
+{
+
+	position : absolute;
+	display:block;
+	font-family : "Times New Roman"; 
+	color : black; 
+	left : 329px;
+	top : 234px;
+	bottom : 0px;
+	font-size : 20px;
+	font-weight : strong; 
+	text-shadow : black 2px ;
+    color:snow;
+    
+}
+.div_start
+{
+
+	background-color : #FFF176;
+	
+}
+/*.start_button
+{
+	position:absolute;
+	color : green;
+	text-decoration : none; 
+	background-color: #FFF176;
+	border:1px thin black;
+	border-radius:9px;
+	padding:2px;
+	width:18%;
+	height:10%;
+	top : 51%;
+	right:601px;
+	font-size : 20px;
+	text-align:center;
+}
+.start_button:hover
+{
+	background-color : green	; 
+	color : black;
+}*/
+.div_table td
+{
+	font-size : 20px;
+	border-right :  0.1em solid gray;  
+	border-left :  0.1em solid gray;  
+	text-align : center;
+	padding-left : 30px;
+	padding-right : 30px;
+	padding-top : 0px; 
+	padding-bottom : 0px; 
+    
+}
+#empty
+{
+	padding-left : 235px;
+}
+
+#no_border
+{
+	border : 0px;
+}
+
+/*
+.div_title_center_C
+{
+	position : absolute;
+	display:block;
+	font-family : Times New Roman ; 
+	color : black; 
+	left : 600px;
+	top : 100px;
+	bottom : 0px;
+	text-align : center; 
+	font-size : 40px;
+	font-weight : strong; 
+	text-shadow : black 2px ;
+}
+*/
+.div_title_center_js
+{
+	position : absolute;
+	display:block;
+	font-family : Times New Roman ; 
+	color : black; 
+	left : 352px;
+	top : 100px;
+	bottom : 0px;
+	text-align : center; 
+	font-size : 40px;
+	font-weight : strong; 
+	text-shadow : black 2px ;
+       
+}
+
+.div_title_center_and
+{
+	position : absolute;
+	display:block;
+	font-family : Times New Roman ; 
+	color : black; 
+	left : 500px;
+	top : 100px;
+	bottom : 0px;
+	text-align : center; 
+	font-size : 40px;
+	font-weight : strong; 
+	text-shadow : black 2px ;
+
+}
+/*
+video {
+  width: initial;
+  height: initial;
+}
+
+
+#player{
+    display: inline;
+    margin-left : 10px;
+}
+
+#next {
+    display:block;
+    position: relative;
+    float:right;
+}
+#vids
+{
+    display: block; 
+    position: relative; 
+    padding-right: 90px;   
+}*/
+
+#video_player { 
+  display: table; line-height: 0;
+  font-size: 0; background: #000;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#video_container { 
+  position: relative;
+}
+#video_player div, #video_player figcaption { 
+  display: table-cell;
+  vertical-align: top; 
+}
+#video_container video { 
+  position: relative; 
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+#video_player figcaption { width: 25%; }
+#video_player figcaption a { display: block; }
+#video_player figcaption a { 
+  opacity: .5;
+  transition: 1s opacity; 
+}
+#video_player figcaption a img, figure video { 
+  width: 100%; height: auto; 
+}
+#video_player figcaption a.currentvid, #video_player figcaption a:hover, #video_player figcaption a:focus { opacity: 1; }
+@media (max-width: 700px) {
+  #video_player video, #video_player figcaption { 
+    display: table-row; 
+  }
+#video_container { padding-top: 56.25%; }
+#video_player figcaption a { 
+  display: inline-block; width: 33.33%; 
+}
+
+}
+
+.button {
+  
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 100px;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: arial;
+  letter-spacing: .05em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  -webkit-appearance: none;
+  margin: 0px;
+  border-radius: 10px;
+}
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+}
+
+#div {
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+}
+h4 {
+    font-size: 2em;
+}
+hr {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#tabdiv {
+    text-align: center;
+}
+#login {
+    padding: 5px 35px;
+    margin-top: 0px;
+    float: right;
+    border-radius: 2px;
+    font-size: 1.4em;
+}
